@@ -11,7 +11,7 @@ class R010_Variable extends Component {
         var varName = 'react';
         console.log('varName1 : '+varName);
         //'varName' is already defined no-redeclare 
-        var varName = '200'; 
+        //var varName = '200'; 
         console.log('varName2 : '+varName);
         //-> var변수는 재선언, 재할당 허용
 
