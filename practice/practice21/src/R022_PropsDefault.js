@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//props의 기본값은 부모 컴포넌트에서 값이 넘어 오지 않았을 때 사용한다.
+//defaultProps라는 문법을 사용한다.
 class R022_PropsDefault extends Component {
     render() {
         let {
