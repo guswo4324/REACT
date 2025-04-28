@@ -1,0 +1,40 @@
+.header {
+  background-color: rgb(46, 90, 212);
+  color:white;
+  padding-left:20px
+}
+.header h2{
+  margin-top:0px;
+  padding-left:10px;
+}
+
+.header p{
+  padding-left:10px;
+  margin-bottom: 0px;
+}
+
+.container {
+  background-color:rgb(255, 255, 255);
+  padding-left:30%;
+  min-height:500px;
+}
+
+.textBox{
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+
+.footer {
+  display:flex;
+  justify-content: center;
+  background-color: grey;
+  font-size:10px;
+  height:30px;
+}
+
+.footer p{
+  color:white;
+}
