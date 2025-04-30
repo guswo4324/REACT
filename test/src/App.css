@@ -91,3 +91,9 @@
   color: #666;
   font-size: 0.9rem;
 }
+
+.sort-control {
+  float:right;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

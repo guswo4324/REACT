@@ -41,7 +41,7 @@ function Body() {
                 <h2>인기 여행지</h2> 
                 <div className="travel-grid">
                     <div className="travel-card">
-                        <img className="travel-card-image" src="https://placehold.co/300x200?text=jejudo"></img>
+                        <img className="travel-card-image" src="https://placehold.co/300x200?text=jejudo" alt="제주도"></img>
                         <content className="travel-card-content">
                             <h3>제주도</h3>
                             <rating className="travel-card-rating">★★★★★(5/5)
@@ -50,7 +50,7 @@ function Body() {
                         </content>
                     </div>
                     <div className="travel-card">
-                        <img className="travel-card-image" src="https://placehold.co/300x200?text=Hawaii"></img>
+                        <img className="travel-card-image" src="https://placehold.co/300x200?text=Hawaii" alt="하와이"></img>
                         <content className = "travel-card-content">
                             <h3>하와이</h3>
                             <rating className="travel-card-rating">★★★★★(5/5)</rating>
@@ -58,7 +58,7 @@ function Body() {
                         </content>
                     </div>
                     <div className="travel-card">
-                        <img className="travel-card-image" src="https://placehold.co/300x200?text=Barcelona"></img>
+                        <img className="travel-card-image" src="https://placehold.co/300x200?text=Barcelona" alt="바르셀로나"></img>
                         <content className = "travel-card-content">
                             <h3 >바르셀로나</h3>
                             <rating className="travel-card-rating">★★★★☆(4/5)</rating>

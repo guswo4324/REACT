@@ -9,6 +9,7 @@ function AddTodoForm({ onAdd }) {
     }
 
     const handleSubmit = (e) => {
+        //새로고침방지
         e.preventDefault();
         console.log(`text.trim:${text.trim()}`);
         if(!text.trim()) {
