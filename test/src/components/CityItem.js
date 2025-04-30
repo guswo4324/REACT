@@ -10,9 +10,9 @@ function CityItem({ city, onDelete }) {
                     {"★".repeat(city.rating)}{"☆".repeat(5-city.rating)} ({city.rating}/5)                
                 </rating>
                 <p>{city.sub}</p>
-                <button className="delete-btn" onClick={(e) => onDelete(city.id, e)}>
+                {/* <button className="delete-btn" onClick={(e) => onDelete(city.id, e)}>
                     삭제
-                </button>
+                </button> */}
             </content>
         </div>
     ); 

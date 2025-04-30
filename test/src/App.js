@@ -9,9 +9,7 @@ function App() {
   return (
     <div ClassName="App">
         <Header/>
-
         <CityList/>
-
         <Footer/>
     </div>
   );

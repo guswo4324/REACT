@@ -28,14 +28,14 @@ function TodoList() {
         },
     ]);
 
-    //새 도시 추가 함수
+    //새 도시 추가 함수(객체 통째로 넘기기 때문)
     const addCity = ({city, url, sub, rating}) => {
         const newCity = {
             id: Date.now(),
-            city,
-            url,
-            sub,
-            rating,
+            city:city,
+            url:url,
+            sub:sub,
+            rating:rating,
         };
         console.log(`새 도시:${JSON.stringify(newCity)}`);
         setTodos([...todos, newCity]);
@@ -85,7 +85,7 @@ function TodoList() {
                         <CityItem 
                             key={city.id} 
                             city={city} 
-                            onDelete={DeleteCity}
+                            // onDelete={DeleteCity}
                         />
                     ))}
                 </div>

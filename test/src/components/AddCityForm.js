@@ -66,7 +66,7 @@ function AddCityForm({ onAdd }) {
                 </div>
                 <h4>평점(1-5)</h4>
                 <div className="rating-input">
-                    <div className="sort-control">
+                    <div>
                         <input 
                             type="range" 
                             min="1" 
