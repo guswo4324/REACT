@@ -71,19 +71,14 @@ function TodoList() {
                         if(value === "이름순"){
                             copy.sort((a,b) => a.city.toUpperCase() < b.city.toUpperCase() ? -1 : 1);
                         }
-                        else if(value === "평점순(오름차순)"){
-                            copy.sort((a,b) => a.rating - b.rating); //오름차순
-                        }
-                        else if(value === "평점순(내림차순)"){
+                        else if(value === "평점순"){
                             copy.sort((a,b) => b.rating - a.rating); //내림차순
                         }
-                        
                         setTodos(copy);
                     }}
                 >
                     <option>이름순</option>
-                    <option>평점순(오름차순)</option>
-                    <option>평점순(내림차순)</option>
+                    <option>평점순</option>
                 </select>
                 <div className="travel-grid">
                     {todos.map(city => (
