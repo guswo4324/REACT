@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import './App.css';
+import './Addaction.css';
+import React from 'react';
 import Header from './components/header';
 import Body from './components/body';
 import Footer from './components/footer';
-import './App.css';
-import './Addaction.css';
+
 
 function App() {
   // const[city, setCity] = useState([
@@ -13,11 +14,12 @@ function App() {
   // ])
 
   
-
   return (
     <div ClassName="App">
         <Header/>
+
         <Body/>
+        
         <Footer/>
     </div>
   );
