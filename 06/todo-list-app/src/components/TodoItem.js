@@ -1,6 +1,7 @@
 import React from 'react';
+import classNames from 'classnames';
 
-function TodoItem({ todo, onToggle, onDelete }) { 
+function TodoItem({ todo, onToggle, onDelete, onImportant }) { 
 
     //우선순위에 따라 색상 결정
     const getPriorityColor = (priority) => {
@@ -22,6 +23,13 @@ function TodoItem({ todo, onToggle, onDelete }) {
         e.stopPropagation();
         console.log(`체크박스 변경 Id:${id}, checked:${e.target.checked}`);
         onToggle(id, e);
+    };
+
+    const onImportantChange=(id, e) => {
+        //자식호출 했을때 부모요소 같이 실행되는것을 막음
+        e.stopPropagation();
+        console.log(`중요 Id:${id}, checked:${e.target.checked}`);
+        onImportant(id, e);
     };
 
     return(
@@ -46,9 +54,14 @@ function TodoItem({ todo, onToggle, onDelete }) {
                         ? '중간' 
                         : '낮음'
                 }
-                </span>
+            </span>
+            <button 
+                className={classNames('star-btn', {active: todo.onImportant})}
+                onClick={(e) => onImportantChange(todo.id, e)}
+            >
+                ★
+            </button>
             <div className="todo-actions">
-                <button classname="edit-btn">수정</button>
                 <button className="delete-btn" onClick={(e) => onDelete(todo.id, e)}>
                     삭제
                 </button>

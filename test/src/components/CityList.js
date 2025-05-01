@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import AddCityForm from './AddCityForm';
 import CityItem from './CityItem';
+import CityModal from './CityModal';
 
 function TodoList() {
+
+    //모달
+    const [selectedCity, setSelectedCity] = useState(null);
 
     const [todos, setTodos] = useState([
         {
@@ -42,15 +46,29 @@ function TodoList() {
     };
     
     //도시 삭제 함수
-    const DeleteCity = (id, e) => {
+    // const DeleteCity = (id, e) => {
 
-        e.stopPropagation();
+    //     e.stopPropagation();
 
-        console.log(`할 일 삭제 Id:${id}, 이벤트타입 e:${e.type}`);
-        //1번인 아닌 애들만 필터 -> 2,3만 남은걸 todos에 넣음
-        setTodos(todos.filter((city) => city.id !== id));
-    }
+    //     console.log(`할 일 삭제 Id:${id}, 이벤트타입 e:${e.type}`);
+    //     //1번인 아닌 애들만 필터 -> 2,3만 남은걸 todos에 넣음
+    //     setTodos(todos.filter((city) => city.id !== id));
+    // }
 
+
+    //select 정렬 함수
+    // const handleSelectChange = (e) => {
+    //     const value = e.target.value;
+    //     const copy = [...todos]
+
+    //     if(value === "이름순") {
+    //         copy.sort((a,b) => a.city.toUpperCase() < b.city.toLowerCase() ? -1 : 1);
+    //     }
+    //     else if(value === "평점순") {
+    //         copy.sort((a,b) => b.rating - a.rating); //내림차순
+    //     }
+    //     setTodos(copy);
+    // }
 
     //캡쳐링 단계 이벤트 핸들러
     const handleContainerClickCapture=(e) => {
@@ -66,12 +84,12 @@ function TodoList() {
                     className="sort-control"
                     onChange={(e) => {
                         const value = e.target.value;
-                        const copy = [...todos];
-                    
-                        if(value === "이름순"){
-                            copy.sort((a,b) => a.city.toUpperCase() < b.city.toUpperCase() ? -1 : 1);
+                        const copy = [...todos]
+
+                        if(value === "이름순") {
+                            copy.sort((a,b) => a.city.toUpperCase() < b.city.toLowerCase() ? -1 : 1);
                         }
-                        else if(value === "평점순"){
+                        else if(value === "평점순") {
                             copy.sort((a,b) => b.rating - a.rating); //내림차순
                         }
                         setTodos(copy);
@@ -85,11 +103,20 @@ function TodoList() {
                         <CityItem 
                             key={city.id} 
                             city={city} 
-                            // onDelete={DeleteCity}
+                            onDetailClick={() => setSelectedCity(city)}
+                            //onDelete={DeleteCity}
                         />
                     ))}
                 </div>
             </div>
+            {
+                selectedCity && 
+                    //CItyModal에 city랑 onClose 들어가야함
+                    <CityModal
+                        city={selectedCity}
+                        onClose={() => setSelectedCity(null)}
+                    />
+            }
         </div>
     );
 }

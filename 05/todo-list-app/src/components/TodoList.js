@@ -21,12 +21,14 @@ function TodoList() {
     };
 
     //새 할 일 추가 함수
-    const addTodo = (text) => {
+    const addTodo = (text, priority) => {
         const newTodo = {
             id:Date.now(),
             text: text,
+            priority: priority,
             completed: false,
         };
+
         console.log(`새 할 일:${JSON.stringify(newTodo)}`);
         setTodos([...todos, newTodo]);
     };
@@ -54,10 +56,10 @@ function TodoList() {
                 <ul className="todo-list">
                 {todos.map(todo => (
                     <TodoItem 
-                    key={todo.id} 
-                    todo={todo} 
-                    onToggle={toggleTodo}
-                    onDelete={DeleteTodo}
+                        key={todo.id} 
+                        todo={todo} 
+                        onToggle={toggleTodo}
+                        onDelete={DeleteTodo}
                     />
                 ))}
                 </ul>
