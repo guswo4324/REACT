@@ -12,7 +12,7 @@ function TodoList() {
             url:"https://placehold.co/300x200?text=jejudo", 
             sub:'아름다운 자연 경관 독특한 문화를 가진 한국의 대표적인 휴양지', 
             rating: 5,
-            view:0,
+            view:1,
         },
         {
             id:2, 
@@ -20,7 +20,7 @@ function TodoList() {
             url:"https://placehold.co/300x200?text=Hawaii", 
             sub:'에메랄드 빛 바다와 화산지형이 어우러진 열대 천국으로, 독특한 플라네시안 문화와 여유로운 알로하 정신을 느낄 수 있는 곳', 
             rating:5,
-            view:0,
+            view:1,
         },
         {
             id:3, 
@@ -28,7 +28,7 @@ function TodoList() {
             url:"https://placehold.co/300x200?text=Barcelona", 
             sub:'가우디의 건축물과 지중해의 해변을 모두 즐길 수 있는 매력적인 도시입니다.', 
             rating:4,
-            view:0,
+            view:1,
         },
     ]);
 

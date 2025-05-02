@@ -33,6 +33,7 @@ function TodoItem({ todo, onToggle, onDelete, onImportant }) {
     // 카테고리 ID로 카테고리 객체 찾기
     const getCategoryId = (categoryId) => {
         return (
+            // find해서 없으면("general이 없고 final이 있으면") CATEGORY[0] 출력
             CATEGORIES.find((category) => category.id === categoryId) || CATEGORIES[0]
         );
     };

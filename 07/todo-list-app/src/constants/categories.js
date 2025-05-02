@@ -5,6 +5,7 @@ import workBg from '../images/backgrounds/general-bg.png'
 import exerciseBg from '../images/backgrounds/general-bg.png'
 import personalBg from '../images/backgrounds/general-bg.png'
 
+//다른데서도 가져다 쓸수있게 하는 기능(export : 내보내기)
 export const CATEGORIES = [
     { id: 'general', name: '일반', icon: <FaHome /> },
     { id: 'work', name: '업무', icon: <FaBriefcase /> },

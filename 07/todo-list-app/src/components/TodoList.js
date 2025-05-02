@@ -59,7 +59,6 @@ function TodoList() {
             important: false,
             category: selectedCategory,
         };
-
         // console.log(`새 할 일:${JSON.stringify(newTodo)}`);
         setTodos([...todos, newTodo]);
     };
@@ -126,7 +125,8 @@ function TodoList() {
                     selectedCategory === category.id ? 'selected' : ''
                 }`}
                 onClick={() => handleSelectedCategory(category.id)}
-            >
+            >   
+            {/* map한걸 category.icon이랑 category.name 씀 */}
                 {category.icon}
                 <span>{category.name}</span>
             </button>
