@@ -65,6 +65,10 @@ function TodoList() {
     const [filter, setFilter] = useState('all');
 
     //필터링 된 할 일 목록
+    //filteredTodos에는 아무것도 없는상태
+    //filter가 'all'이면 todo의 전체를 반환
+    //filter가 'completed'이면 todo의 completed된 상태만 반환
+    //반환 된 todo들을 filter를 걸어 todos에 넣음
     const filteredTodos = todos.filter((todo) => 
     {
         // console.log(`filteredTodos:${}`);

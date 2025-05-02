@@ -34,8 +34,10 @@ function TodoItem({ todo, onToggle, onDelete, onImportant }) {
 
     return(
         <li 
-            className={`todo-item ${todo.completed ? 'completed': ' '}`}
-            onClick={() => onToggle(todo.id)}
+            className={classNames('todo-item', {
+                completed: todo.completed,
+                important: todo.important,
+            })}
         >
             <input 
                 type="checkbox" 
@@ -56,7 +58,7 @@ function TodoItem({ todo, onToggle, onDelete, onImportant }) {
                 }
             </span>
             <button 
-                className={classNames('star-btn', {active: todo.onImportant})}
+                className={classNames('start-btn', {active: todo.onImportant})}
                 onClick={(e) => onImportantChange(todo.id, e)}
             >
                 ★

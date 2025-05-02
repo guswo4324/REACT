@@ -30,7 +30,7 @@ function TodoList() {
     ]);
 
     //새 도시 추가 함수(객체 통째로 넘기기 때문)
-    const addCity = ({city, url, sub, rating}) => {
+    const addCity = ({ city, url, sub, rating }) => {
         const newCity = {
             id: Date.now(),
             city:city,
@@ -67,20 +67,21 @@ function TodoList() {
     //     setTodos(copy);
     // }
 
-    //모달
-    const [selectedCity, setSelectedCity] = useState(null);
-
     //캡쳐링 단계 이벤트 핸들러
     const handleContainerClickCapture=(e) => {
         console.log(`캡쳐링 단계: ${e.target.tagName} 요소 클릭 감지`);
     };
 
+    //모달
+    const [selectedCity, setSelectedCity] = useState(null);
+
+    //방문페이지
     const [view, setView] = useState(1);
 
     const addView = () => {
         setView(view + 1);
     }
-    
+
     return(
         <div className="main-content" onClickCapture={handleContainerClickCapture}>
             <AddCityForm onAdd={addCity}/>
@@ -111,10 +112,9 @@ function TodoList() {
                             city={city} 
                             onDetailClick={() => {
                                 setSelectedCity(city);
-                                addView();
+                                addView(setView);
                                 }
                             }
- 
                             //onDelete={DeleteCity}
                         />
                     ))}

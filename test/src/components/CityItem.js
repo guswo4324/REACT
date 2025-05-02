@@ -11,7 +11,7 @@ function CityItem({ city, onDetailClick, addView }) {
                     {"★".repeat(city.rating)}{"☆".repeat(5-city.rating)} ({city.rating}/5)                
                 </div>
                 <p>{city.sub}</p>
-                <button className="detail-btn" onClick={onDetailClick || addView}>
+                <button className="detail-btn" onClick={onDetailClick || addView(city)}>
                     상세정보
                 </button> 
             </div>
