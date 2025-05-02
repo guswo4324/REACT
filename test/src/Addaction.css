@@ -55,13 +55,18 @@
     background-color: #003d82;
 }
 
-.detail-btn {
+.view-detail-btn {
     background-color: #0056b3;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: background-color 0.3s;
 }
+
+.view-details-btn:hover {
+    background-color: #003d82;
+}
+  

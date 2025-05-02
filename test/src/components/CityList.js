@@ -56,7 +56,7 @@ function TodoList() {
     //     );
     // };
 
-    //방문페이지
+    //방문 조회 추가 함수
     const addView = (id) => {
         setTodos(
             todos.map((city) => 
@@ -69,7 +69,6 @@ function TodoList() {
     // const DeleteCity = (id, e) => {
 
     //     e.stopPropagation();
-
     //     console.log(`할 일 삭제 Id:${id}, 이벤트타입 e:${e.type}`);
     //     //1번인 아닌 애들만 필터 -> 2,3만 남은걸 todos에 넣음
     //     setTodos(todos.filter((city) => city.id !== id));
@@ -90,13 +89,13 @@ function TodoList() {
         setTodos(copy);
     }
 
+    //모달
+    const [selectedCity, setSelectedCity] = useState(null);
+
     //캡쳐링 단계 이벤트 핸들러
     const handleContainerClickCapture=(e) => {
         console.log(`캡쳐링 단계: ${e.target.tagName} 요소 클릭 감지`);
     };
-
-    //모달
-    const [selectedCity, setSelectedCity] = useState(null);
 
     return(
         <div className="main-content" onClickCapture={handleContainerClickCapture}>
