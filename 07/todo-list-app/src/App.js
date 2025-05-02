@@ -17,7 +17,6 @@ function App() {
         //   alt="앵두"
         // />
         /* <img src={angdo} className="app-logo" alt="앵두" /> */
-        /* <TodoList/> */
         <TodoList />
       }
     </div>

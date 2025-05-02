@@ -11,37 +11,53 @@ function TodoList() {
             city:'제주도', 
             url:"https://placehold.co/300x200?text=jejudo", 
             sub:'아름다운 자연 경관 독특한 문화를 가진 한국의 대표적인 휴양지', 
-            rating: 5
+            rating: 5,
+            view:0,
         },
         {
             id:2, 
             city:'하와이', 
             url:"https://placehold.co/300x200?text=Hawaii", 
             sub:'에메랄드 빛 바다와 화산지형이 어우러진 열대 천국으로, 독특한 플라네시안 문화와 여유로운 알로하 정신을 느낄 수 있는 곳', 
-            rating:5
+            rating:5,
+            view:0,
         },
         {
             id:3, 
             city:'바르셀로나', 
             url:"https://placehold.co/300x200?text=Barcelona", 
             sub:'가우디의 건축물과 지중해의 해변을 모두 즐길 수 있는 매력적인 도시입니다.', 
-            rating:4
+            rating:4,
+            view:0,
         },
     ]);
 
     //새 도시 추가 함수(객체 통째로 넘기기 때문)
-    const addCity = ({ city, url, sub, rating }) => {
+    const addCity = ({ city, url, sub, rating, view }) => {
         const newCity = {
             id: Date.now(),
             city:city,
             url:url,
             sub:sub,
             rating:rating,
+            view:view
         };
         console.log(`새 도시:${JSON.stringify(newCity)}`);
         setTodos([...todos, newCity]);
     };
-    
+
+    //방문페이지
+    const addView = (id) => {
+        setTodos(todos.map(city => {
+            if(city.id === id){
+                return { ...city, view:city.view + 1};
+            }
+            else{
+                return city;
+            }
+        }))
+    }
+
     //도시 삭제 함수
     // const DeleteCity = (id, e) => {
 
@@ -54,18 +70,18 @@ function TodoList() {
 
 
     //select 정렬 함수
-    // const handleSelectChange = (e) => {
-    //     const value = e.target.value;
-    //     const copy = [...todos]
+    const handleSelectChange = (e) => {
+        const value = e.target.value;
+        const copy = [...todos]
 
-    //     if(value === "이름순") {
-    //         copy.sort((a,b) => a.city.toUpperCase() < b.city.toLowerCase() ? -1 : 1);
-    //     }
-    //     else if(value === "평점순") {
-    //         copy.sort((a,b) => b.rating - a.rating); //내림차순
-    //     }
-    //     setTodos(copy);
-    // }
+        if(value === "이름순") {
+            copy.sort((a,b) => a.city.toUpperCase() < b.city.toLowerCase() ? -1 : 1);
+        }
+        else if(value === "평점순") {
+            copy.sort((a,b) => b.rating - a.rating); //내림차순
+        }
+        setTodos(copy);
+    }
 
     //캡쳐링 단계 이벤트 핸들러
     const handleContainerClickCapture=(e) => {
@@ -75,13 +91,6 @@ function TodoList() {
     //모달
     const [selectedCity, setSelectedCity] = useState(null);
 
-    //방문페이지
-    const [view, setView] = useState(1);
-
-    const addView = () => {
-        setView(view + 1);
-    }
-
     return(
         <div className="main-content" onClickCapture={handleContainerClickCapture}>
             <AddCityForm onAdd={addCity}/>
@@ -89,18 +98,7 @@ function TodoList() {
                 <h2>인기 여행지</h2> 
                 <select 
                     className="sort-control"
-                    onChange={(e) => {
-                        const value = e.target.value;
-                        const copy = [...todos]
-
-                        if(value === "이름순") {
-                            copy.sort((a,b) => a.city.toUpperCase() < b.city.toLowerCase() ? -1 : 1);
-                        }
-                        else if(value === "평점순") {
-                            copy.sort((a,b) => b.rating - a.rating); //내림차순
-                        }
-                        setTodos(copy);
-                    }}
+                    onChange={handleSelectChange}
                 >
                     <option>이름순</option>
                     <option>평점순</option>
@@ -112,7 +110,7 @@ function TodoList() {
                             city={city} 
                             onDetailClick={() => {
                                 setSelectedCity(city);
-                                addView(setView);
+                                addView(city.id);
                                 }
                             }
                             //onDelete={DeleteCity}
@@ -126,7 +124,6 @@ function TodoList() {
                     <CityModal
                         city={selectedCity}
                         onClose={() => setSelectedCity(null)}
-                        view={view}
                     />
             }
         </div>
