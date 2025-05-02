@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { CATEGORIES } from '../constants/categories';
 
 function TodoItem({ todo, onToggle, onDelete, onImportant }) {
   // 우선순위에 따라 색상 결정
@@ -29,6 +30,15 @@ function TodoItem({ todo, onToggle, onDelete, onImportant }) {
         onImportant(id);
     };
 
+    // 카테고리 ID로 카테고리 객체 찾기
+    const getCategoryId = (categoryId) => {
+        return (
+            CATEGORIES.find((category) => category.id === categoryId) || CATEGORIES[0]
+        );
+    };
+
+    const curCategory = getCategoryId(todo.category);
+
     return (
         <li
         className={classNames('todo-item', {
@@ -37,6 +47,8 @@ function TodoItem({ todo, onToggle, onDelete, onImportant }) {
         })}
         >
         <div className="todo-content">
+            {/* category icon */}
+            <div>{curCategory.icon}</div>
             <input
             type="checkbox"
             checked={todo.completed}

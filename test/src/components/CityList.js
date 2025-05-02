@@ -46,17 +46,24 @@ function TodoList() {
         setTodos([...todos, newCity]);
     };
 
+    //할 일 완료 상태 토글 함수
+    //...todo : 객체복사하고 setTodos에 넣음(completed)
+    // const toggleTodo = (id) => {
+    //     setTodos(
+    //     todos.map((todo) => 
+    //         todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    //     )
+    //     );
+    // };
+
     //방문페이지
     const addView = (id) => {
-        setTodos(todos.map(city => {
-            if(city.id === id){
-                return { ...city, view:city.view + 1};
-            }
-            else{
-                return city;
-            }
-        }))
-    }
+        setTodos(
+            todos.map((city) => 
+                city.id === id ? { ...city, view:city.view + 1 } : city
+            )    
+        );
+    };
 
     //도시 삭제 함수
     // const DeleteCity = (id, e) => {

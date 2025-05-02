@@ -1,16 +1,8 @@
+import './TodoList.css';
 import React, { useState } from 'react';
 import TodoItem from './TodoItem';
 import AddTodoForm from './AddTodoForm';
-import './TodoList.css';
-import classNames from 'classnames';
-import { FaHome, FaBriefcase, FaRunning, FaUser } from 'react-icons/fa';
-
-const CATEGORIES = [
-    { id: 'general', name: '일반', icon: <FaHome /> },
-    { id: 'work', name: '업무', icon: <FaBriefcase /> },
-    { id: 'exercise', name: '운동', icon: <FaRunning /> },
-    { id: 'personal', name: '개인', icon: <FaUser /> },
-];
+import { CATEGORIES } from '../constants/categories';
 
 function TodoList() {
     // 할 일 목록
