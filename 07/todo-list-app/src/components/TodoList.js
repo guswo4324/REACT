@@ -80,15 +80,10 @@ function TodoList() {
     // 필터링 된 할 일 목록
     const filteredTodos = todos.filter((todo) => {
         // console.log(`filteredTodos:${filter}`);
-        if (filter === 'all') {
-            return true;
-        } else if (filter === 'completed') {
-            return todo.completed;
-        } else if (filter === 'active') {
-            return !todo.completed;
-        } else if (filter === 'important') {
-            return todo.important;
-        }
+        if (filter === 'all') return true;
+        else if (filter === 'completed') return todo.completed;
+        else if (filter === 'active') return !todo.completed;
+        else if (filter === 'important') return todo.important;
         return true;
     });
 

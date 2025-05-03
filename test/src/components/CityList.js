@@ -57,6 +57,7 @@ function TodoList() {
     // };
 
     //방문 조회 추가 함수
+    //todos.map((city)) city를 가리키기 때문에 city.id는 todos의 id를 가르킴
     const addView = (id) => {
         setTodos(
             todos.map((city) => 
