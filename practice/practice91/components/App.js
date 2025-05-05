@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route  } from 'react-router-dom';
 //import reactRouter from './R089_reactdRouter';
 //import reactRouter2 from './R089_reactRouter2';
-import reactDebounce from './R094_reactDebounce';
+//import reactDebounce from './R094_reactDebounce';
+import reactThrottle from './R095_reactThrottle';
 
 //css
 import '../css/new.css';
@@ -23,7 +24,8 @@ class App extends Component {
         {/* <Route exact path='/' component={reactRouter} />
         <Route exact path='/reacdtRouter2' component={reactRouter2} /> */}
         <Route exact path='/' component={LoginForm} />
-        <Route exact path='/Debounce' component={reactDebounce} />
+        {/* <Route exact path='/Debounce' component={reactDebounce} /> */}
+        <Route exact path='/Debounce' component={reactThrottle} />
         <Footer/>
       </div>
     )
