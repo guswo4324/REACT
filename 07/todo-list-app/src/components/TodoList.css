@@ -98,7 +98,7 @@
 }
 
 .todo-item {
-padding: 10px 15px;
+    padding: 10px 15px;
     margin-bottom: 8px;
     background-color: #f8f8f8;
     border-radius: 4px;
@@ -195,7 +195,7 @@ padding: 10px 15px;
 
 .empty-message {
     text-align: center;
-    color: #888;
+    color: #d30c0c;
     font-style: italic;
 }
 

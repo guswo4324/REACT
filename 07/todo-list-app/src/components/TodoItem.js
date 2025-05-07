@@ -51,32 +51,34 @@ function TodoItem({ todo, onToggle, onDelete, onImportant }) {
             {/* category icon */}
             <div>{curCategory.icon}</div>
             <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={(e) => handleCheckboxChange(todo.id, e)}
+                type="checkbox"
+                checked={todo.completed}
+                onChange={(e) => handleCheckboxChange(todo.id, e)}
             />
             <span className="todo-item-text">{todo.text}</span>
             {/* 우선순위 추가 */}
             <span
-            className="priority-badge"
-            style={{ backgroundColor: getPriorityColor(todo.priority) }}
+                className="priority-badge"
+                style={{ backgroundColor: getPriorityColor(todo.priority) }}
             >
-            {todo.priority === 'high'
-                ? '높음'
-                : todo.priority === 'medium'
-                ? '중간'
-                : '낮음'}
+                {
+                    todo.priority === 'high'
+                    ? '높음'
+                    : todo.priority === 'medium'
+                    ? '중간'
+                    : '낮음'
+                }
             </span>
             <button
-            className={classNames('star-btn', { active: todo.important })}
-            onClick={(e) => handleImportantChange(todo.id, e)}
+                className={classNames('star-btn', { active: todo.important })}
+                onClick={(e) => handleImportantChange(todo.id, e)}
             >
             ★
             </button>
         </div>
         <div className="todo-actions">
             <button className="delete-btn" onClick={(e) => onDelete(todo.id, e)}>
-            삭제
+                삭제
             </button>
         </div>
         </li>

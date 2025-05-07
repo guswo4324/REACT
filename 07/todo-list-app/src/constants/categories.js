@@ -1,9 +1,9 @@
 import React from "react";
 import { FaHome, FaBriefcase, FaRunning, FaUser } from 'react-icons/fa';
 import generalBg from '../images/backgrounds/general-bg.png'
-import workBg from '../images/backgrounds/general-bg.png'
-import exerciseBg from '../images/backgrounds/general-bg.png'
-import personalBg from '../images/backgrounds/general-bg.png'
+import workBg from '../images/backgrounds/work-bg.png'
+import exerciseBg from '../images/backgrounds/exercise-bg.png'
+import personalBg from '../images/backgrounds/personal-bg.png'
 
 //다른데서도 가져다 쓸수있게 하는 기능(export : 내보내기)
 export const CATEGORIES = [
@@ -19,4 +19,7 @@ export const BACKGROUND_IMAGES = {
     exercise: exerciseBg,
     personal:personalBg,
 }
+
+export const FILTERS = ['all', 'active', 'completed', 'important'];
+
 
