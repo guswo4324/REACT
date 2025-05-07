@@ -3,9 +3,9 @@ import { Link, Outlet } from 'react-router-dom';
 
 function Product() {
     const products = [
-        {id: 1, name:'알라두'},
-        {id: 2, name:'신밧두'},
-        {id: 3, name:'아라비안 나잇두'},
+        {id: 1, name: '알라두'},
+        {id: 2, name: '신밧두'},
+        {id: 3, name: '아라비안 나잇두'},
     ];
     
     return(
