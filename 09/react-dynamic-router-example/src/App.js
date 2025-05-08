@@ -1,12 +1,19 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
-import TodoList from './components/TodoList';
+import UserProfile from './pages/UserProfile';
+import PostComment from './pages/PostComment';
+import ProductDetail from './pages/ProductDetail';
+// import About from './pages/About';
+// import TodoList from './components/TodoList';
 
-//임시 페이지 컴포넌트
 
 function App() {
+
+  const userId = '핑구';
+  const postId ='1';
+  const commentId ='2';
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,19 +24,21 @@ function App() {
               <Link to="/">홈</Link>
             </li>
             <li>
-              <Link to="/todos">할 일 목록</Link>
+              <Link to={`/users/${userId}`}>프로필</Link>
             </li>
             <li>
-              <Link to="/about">소개</Link>
+              <Link to={`/post/${postId}/comments/${commentId }`}>댓글상세</Link>
             </li>
           </ul>
         </nav>
       </header>
       <main>
+        {/* /users/${userId} 랑 /users/:userId 같아야함*/}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/todos" element={<TodoList />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/users/:userId?" element={<UserProfile />} />
+          <Route path="/post/:postId/comments/:commentId" element={<PostComment/>} />
+          <Route path="/post/:postId/comments/:commentId/productDetail/:productId" element={<ProductDetail/>} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </main>

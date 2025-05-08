@@ -68,7 +68,6 @@ function TodoList() {
 
     //도시 삭제 함수
     // const DeleteCity = (id, e) => {
-
     //     e.stopPropagation();
     //     console.log(`할 일 삭제 Id:${id}, 이벤트타입 e:${e.type}`);
     //     //1번인 아닌 애들만 필터 -> 2,3만 남은걸 todos에 넣음
