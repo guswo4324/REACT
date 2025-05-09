@@ -50,6 +50,13 @@ function FetchDeleteExample() {
             <button onClick={handleDelete} disabled={loading}>
                 {loading ? '삭제중...' : '게시물 삭제'}
             </button>
+            
+            {result&&
+                <div>
+                    <h3>결과:</h3>
+                    <p>{result.success ? result.message: `오류: ${result.error}`}</p>
+                </div>
+            }
         </div>
     )
     
