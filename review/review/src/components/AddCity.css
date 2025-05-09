@@ -10,17 +10,17 @@
     margin-top: 0;
     color: #0056b3;
 }
-  
+
 .form-group {
     margin-bottom: 15px;
 }
-  
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-  
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -29,17 +29,17 @@
     border-radius: 4px;
     font-size: 1rem;
 }
-  
+
 .rating-input {
     display: flex;
     align-items: center;
 }
-  
+
 .rating-input input {
     flex: 1;
     margin-right: 10px;
 }
-  
+
 .submit-btn {
     background-color: #0056b3;
     color: white;
@@ -50,7 +50,23 @@
     font-size: 1rem;
     transition: background-color 0.3s;
 }
-  
+
 .submit-btn:hover {
     background-color: #003d82;
 }
+
+.view-detail-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+    background-color: #003d82;
+}
+  

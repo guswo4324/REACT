@@ -39,17 +39,38 @@ function CityList() {
         setTodos([...todos, newCity]);
     };
 
+    const handleSelectChange = (e) => {
+        const value = e.target.value;
+        const copy =[...todos];
+
+        if(value === "이름순") {
+            copy.sort((a,b) => a.city.toUpperCase() < b.city.toLowerCase() ? -1 : 1);
+        }
+        else if(value === "평점순") {
+            copy.sort((a,b) => b.rating - a.rating);
+        }
+        setTodos(copy);
+    }
+
     return(
         <div className="main-content">
             <AddCityForm onAdd={addCity}/>
             <div className="container">
                 <h2>인기여행지</h2>
+                <select 
+                    className="sort-control"
+                    onChange={handleSelectChange}
+                >
+                    <option>이름순</option>
+                    <option>평점순</option>
+                </select>
                 <div className="travel-grid">
                     {todos.map(city => (
                         <CityItem
                             key={city.id}
                             city={city}
                         />
+                        
                     ))}
                 </div>
             </div>

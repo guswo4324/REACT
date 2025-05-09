@@ -1,5 +1,4 @@
 import './App.css';
-import './components/Body.css';
 import './components/AddCity.css';
 import React from 'react';
 import Header from './components/Header';

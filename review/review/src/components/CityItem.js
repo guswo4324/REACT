@@ -10,6 +10,7 @@ function CityItem( {city} ) {
                     {"★".repeat(city.rating)}{"☆".repeat(5-city.rating)} ({city.rating}/5)
                 </div>
                 <p>{city.exp}</p>
+                <button type="submit" className="submit-btn">상세정보</button>
             </div>
         </div>
     )
