@@ -6,7 +6,7 @@ function CityModal( {city, onClose} ) {
             <div className="detail-content">
                 <div className = "travel-card-content">
                     <button className="close-btn" onClick={onClose}>✕</button>
-                    <img className="detail-image" src={city.url} alt={city.city}/>
+                    <img className="detail-image" src={city.url} alt={`${city.city}`}/>
                     <h3>{city.city}</h3>
                     <div className="rating">
                         {"★".repeat(city.rating)}{"☆".repeat(5-city.rating)} ({city.rating}/5)

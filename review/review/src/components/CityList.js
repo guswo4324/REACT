@@ -59,7 +59,7 @@ function CityList() {
 
     const [selectedCity, setSelectedCity] = useState(null);
 
-    const addview = (id) => {
+    const addView = (id) => {
         setTodos(todos.map((city) => 
             city.id === id ? {...city, view:city.view + 1} : city
         ));
@@ -84,7 +84,7 @@ function CityList() {
                             city={city}
                             onDetailClick={() => {
                                 setSelectedCity(city);
-                                addview(city.id);
+                                addView(city.id);
                             }}
                         />
                         

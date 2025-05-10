@@ -6,6 +6,7 @@ function AddCityForm({ onAdd }) {
     const [url, setUrl] = useState('');
     const [exp, setExp] = useState('');
     const [rating, setRating] = useState(3);
+    const [view, setView] = useState(1);
     
     const handleSubmit = (e) => {
         //새로고침 방지
@@ -21,12 +22,14 @@ function AddCityForm({ onAdd }) {
             url, 
             exp, 
             rating:Number(rating),
+            view,
         });
 
         setCity('')
         setUrl('')
         setExp('')
         setRating(3)
+        setView(1)
     }
 
     return(
