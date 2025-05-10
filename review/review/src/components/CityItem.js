@@ -1,6 +1,6 @@
 import React from "react";
 
-function CityItem( {city} ) {
+function CityItem( {city, onDetailClick} ) {
     return(
         <div className="travel-card">
             <div className="travel-card-content">
@@ -10,7 +10,13 @@ function CityItem( {city} ) {
                     {"★".repeat(city.rating)}{"☆".repeat(5-city.rating)} ({city.rating}/5)
                 </div>
                 <p>{city.exp}</p>
-                <button type="submit" className="submit-btn">상세정보</button>
+                <button 
+                    type="submit" 
+                    className="submit-btn"
+                    onClick={onDetailClick}
+                >
+                    상세정보
+                </button>
             </div>
         </div>
     )
