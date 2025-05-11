@@ -4,7 +4,9 @@ function TodoItem({ todo, onToggle, onDelete }) {
 
     //우선순위에 따라 색상 결정
     const getPriorityColor = (priority) => {
+
         console.log(`priority:${priority}`);
+
         switch(priority) {
             case 'high':
                 return '#ff5252';
@@ -20,6 +22,7 @@ function TodoItem({ todo, onToggle, onDelete }) {
     const handleCheckboxChange=(id, e) => {
         //자식호출 했을때 부모요소 같이 실행되는것을 막음
         e.stopPropagation();
+        
         console.log(`체크박스 변경 Id:${id}, checked:${e.target.checked}`);
         onToggle(id, e);
     };

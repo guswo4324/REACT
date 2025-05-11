@@ -14,8 +14,10 @@ function UserGrid() {
     return(
         <div>
             {users.map(user => (
-                <UserCard key={user.id}
-                user={user} />
+                <UserCard 
+                    key={user.id}
+                    user={user} 
+                />
             ))}
         </div>
     )

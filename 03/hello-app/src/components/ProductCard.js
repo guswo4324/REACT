@@ -3,8 +3,8 @@ import React from 'react';
 //구조 분해 할당을 통해  props를 바로 개별변수로 받을 수 있도록 한다
 
 function ProductCard({name, price, discount, isAvailable}) {
-    const finalPrice = isAvailable?
-    price - (price*discount/100):'품절';
+    const finalPrice = 
+    isAvailable ? price - (price*discount/100): '품절';
 
     return(
         <div>

@@ -11,7 +11,7 @@ function Home() {
             </p>
             <div className="home-button">
                 <Link to="/todos" className="btn btn-primary">할 일 목록 보기</Link>
-                <Link to="/about" clasName="btn btn-secondary"></Link>
+                <Link to="/about" className="btn btn-secondary">소개 보기</Link>
             </div>
         </div>
     );

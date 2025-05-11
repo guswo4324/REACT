@@ -5,8 +5,10 @@ function BasicJSX(){
     const element = <h1>Hello, Donur</h1>;
 
     // JSX  없이 동일한 요소 생성
+    // React.createElement가 null인 이유 : props가 없기 때문에
+    // React.createElement 문법 : const element = createElement(type, props, ...children)
     const elementWithoutJSX = React.createElement('h1', null, 'hello, Ddochi');
-
+    
     return(
         <div>
             {element}

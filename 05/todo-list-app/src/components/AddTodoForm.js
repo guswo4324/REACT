@@ -24,7 +24,9 @@ function AddTodoForm({ onAdd }) {
             console.log('빈 할일은 추가 할 수 없습니다')
             return;
         }
+        
         onAdd(text, priority);
+
         setText('');
         setPriority('medium');
     };

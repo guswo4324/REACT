@@ -1,5 +1,4 @@
 import './App.css';
-import './List.css';
 import './components/TodoList.css';
 import React from 'react';
 import TodoList from './components/TodoList';
