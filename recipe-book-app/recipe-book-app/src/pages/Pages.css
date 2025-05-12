@@ -1,0 +1,124 @@
+/* //  */
+.App {
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.header {
+  background-color: rgb(245, 105, 12);
+  color:white;
+  padding-left:20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+  
+/* // */
+
+.App-header {
+  background-color: #d35400;
+  padding: 1rem;
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  border-bottom: 2px solid white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+}
+
+.not-found-page {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.not-found-page h2 {
+  color: #d35400;
+  margin-bottom: 1rem;
+}
+
+
+/* 기존 App.css에 추가 */ /* 홈 페이지 */
+.home-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #d35400;
+}
+
+.btn-secondary {
+  background-color: #7f8c8d;
+}
+
+
+/* 소개 페이지 */
+.about-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-page ul {
+  margin-bottom: 20px;
+}
+
+.about-page li {
+  margin-bottom: 8px;
+}
