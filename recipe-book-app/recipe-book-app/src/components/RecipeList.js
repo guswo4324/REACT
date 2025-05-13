@@ -123,7 +123,6 @@ function RecipeList() {
                     ))}
                 </div>
 
-
                 <ul className="recipe-list">
                 {filteredRecipe.map((recipe) => (
                     <RecipeItem

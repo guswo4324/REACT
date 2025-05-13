@@ -8,7 +8,6 @@ function AddRecipeForm({ onAdd }) {
   const [level, setLevel] = useState('normal');
   
   const handleLevelChange = (e) => {
-    console.log(`우선순위:${e.target.value}`);
     setLevel(e.target.value);
   };
 
