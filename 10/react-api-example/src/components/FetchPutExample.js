@@ -7,6 +7,7 @@ function FetchPutExample() {
     const [result, setResult] = useState(null);
 
     // 초기 데이터 로드
+    // 한번말 실행하기 때문에 [] 넣음
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts/1')
         .then((response) => response.json())
