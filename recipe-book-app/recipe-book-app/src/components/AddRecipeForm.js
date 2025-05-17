@@ -11,7 +11,6 @@ function AddRecipeForm({ onAdd }) {
     setLevel(e.target.value);
   };
 
-
   const handleSubmit = (e) => {
 
     e.preventDefault();
