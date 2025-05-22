@@ -3,7 +3,7 @@ import TodoItem from './TodoItem';
 import AddTodoForm from './AddTodoForm';
 
 function TodoList() {
-      //할 일 목록(false가 -없는 상태)
+    //할 일 목록(false가 -없는 상태)
     const [todos, setTodos] = useState([
         {id:1, text:'리액트 공부하기', completed:false},
         {id:2, text:'useState 이해하기', completed:false},
